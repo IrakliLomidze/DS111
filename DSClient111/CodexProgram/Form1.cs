@@ -21,6 +21,7 @@ using ILG.DS.Dialogs;
 using ILG.DS.Documents;
 using ILG.DS.MSWord;
 using ILG.DS.Forms;
+using System.Diagnostics;
 
 namespace ILG.Codex.CodexR4
 {
@@ -836,10 +837,27 @@ namespace ILG.Codex.CodexR4
                 case "PrintSelection": printDoc(false); break;
                 case "ExportToWord": ShowInWordPIA(); break;// showinword(); break;
                 case "FindDocument": FindInDocument(); break;
-                case "FeedBack": 
-                    System.Diagnostics.Process.Start("mailto:support@codex.ge"); break;
-                case "WebSite": 
-                    System.Diagnostics.Process.Start("https://www.codex.ge"); break;
+                case "FeedBack":
+                    {
+
+                        var processStartInfo = new ProcessStartInfo
+                        {
+                            FileName = "mailto:support@codex.ge",
+                            UseShellExecute = true
+                        };
+                        Process.Start(processStartInfo);
+                    }
+                    break;
+                case "WebSite":
+                    {
+                        var processStartInfo = new ProcessStartInfo
+                        {
+                            FileName = "https://www.codex.ge",
+                            UseShellExecute = true
+                        };
+                        Process.Start(processStartInfo);
+                    }
+                    break;
 
        
                 case "About": AboutDS fabout = new AboutDS(); fabout.ShowDialog(); break;
@@ -1069,8 +1087,13 @@ namespace ILG.Codex.CodexR4
             //DiskFile FF1 = new DiskFile(fn);
             //f.CopyTo(FF1, true);
 
-            System.Diagnostics.Process.Start(fn);
-             
+            Process p = new Process();
+            p.StartInfo = new ProcessStartInfo(fn)
+            {
+                UseShellExecute = true
+            };
+            p.Start();
+
         }
 
         private void AttachSave()
@@ -1957,7 +1980,6 @@ namespace ILG.Codex.CodexR4
             }
 
 
-            //System.Diagnostics.Process.Start(CCFileName);
 
         }
 

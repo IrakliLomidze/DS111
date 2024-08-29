@@ -8,6 +8,7 @@ using ILG.DS.Controls;
 using ILG.DS.Configurations;
 using ILG.DS.Dialogs;
 using ILG.DS.Configurations.Dialogs;
+using System.Diagnostics;
 
 namespace ILG.DS.Dialogs
 {
@@ -186,7 +187,13 @@ namespace ILG.DS.Dialogs
         {
             string BugTraqMail = DSStaticDataConfiguration.Instance.content.BugTraqMail;
             String SMR = "mailto:" + BugTraqMail;
-            System.Diagnostics.Process.Start(SMR);
+
+            var processStartInfo = new ProcessStartInfo
+            {
+                FileName = "mailto:" + BugTraqMail,
+                UseShellExecute = true
+            };
+            Process.Start(processStartInfo);
         }
 
         private void ultraButton1_Click(object sender, EventArgs e)

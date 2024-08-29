@@ -43,15 +43,15 @@
     <ProjectReference Include="..\DSCommon\DSCommonSource\DSCommon\DSCommon.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Infragistics.WinForms" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.AppStylistSupport" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.Editors" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.ListView" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.Misc" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.Portable.Core" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.StatusBar" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.TabControl" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.WinGrid" Version="23.2.81" />
+    <PackageReference Include="Infragistics.WinForms" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.AppStylistSupport" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.Editors" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.ListView" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.Misc" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.Portable.Core" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.StatusBar" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.TabControl" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.WinGrid" Version="23.2.180" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="COFHeaders\COFHeader.cs" />

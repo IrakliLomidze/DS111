@@ -31,16 +31,16 @@
     <Content Include="Images\SellPickerG\Selection\Sel3.gif" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Infragistics.WinForms" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.AppStylistSupport" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.Dock" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.Editors" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.ListBar" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.ListView" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.Misc" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.OfficeNavBar" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.Schedule" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.WinGrid" Version="23.2.81" />
+    <PackageReference Include="Infragistics.WinForms" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.AppStylistSupport" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.Dock" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.Editors" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.ListBar" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.ListView" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.Misc" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.OfficeNavBar" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.Schedule" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.WinGrid" Version="23.2.180" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>

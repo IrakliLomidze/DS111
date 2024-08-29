@@ -195,7 +195,7 @@
 				<File Id="fil450D785DE1624CAB6B06EF8A3505897B" KeyPath="yes" Source="$(var.SourceDirApp)\mscordaccore.dll" />
 			</Component>
 			<Component Id="cmp36545A5B58AF4BE5DDA6EDA624389385" Guid="*" Win64="yes">
-				<File Id="fil941115543756FD44DC7FAB97961A3B78" KeyPath="yes" Source="$(var.SourceDirApp)\mscordaccore_amd64_amd64_8.0.324.11423.dll" />
+				<File Id="fil941115543756FD44DC7FAB97961A3B78" KeyPath="yes" Source="$(var.SourceDirApp)\mscordaccore_amd64_amd64_8.0.724.31311.dll" />
 			</Component>
 			<Component Id="cmp6C3659C9FBF08DD88A7078BB34913F31" Guid="*" Win64="yes">
 				<File Id="fil896C76962BFA7D9A098EDD9730B5471C" KeyPath="yes" Source="$(var.SourceDirApp)\mscordbi.dll" />

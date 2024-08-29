@@ -28,6 +28,7 @@
     <SuppressIces>ICE30</SuppressIces>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AppDS20_VSRuntime.wxs" />
     <Compile Include="BaseProfile.wxs" />
     <Compile Include="DS111.wxs" />
     <Compile Include="profile_Folder.wxs" />

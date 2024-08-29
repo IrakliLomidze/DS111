@@ -1006,7 +1006,14 @@ namespace PdfiumViewer
             {
                 try
                 {
-                    Process.Start(e.Link.Uri);
+                    var processStartInfo = new ProcessStartInfo
+                    {
+                        FileName = e.Link.Uri,
+                        UseShellExecute = true
+                    };
+                    Process.Start(processStartInfo);
+                    //Process.Start(e.Link.Uri);
+                
                 }
                 catch
                 {

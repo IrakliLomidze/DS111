@@ -7,8 +7,8 @@
 
 	<!--<Product Id="{1985D6DB-AC4E-41A2-AD05-125FE70C4323}" Name="DS Client 1.10"-->
 	<!--<Product Id="{1985D6DB-AC4E-41A2-AD05-125FE70C4352}" Name="DS Client 1.10"-->
-	<Product Id="{1985D6DB-AC4E-41A2-AD05-125FE70C5463}" Name="DS Client 1.11"
-    	   Language="1033" Version="10.13.463"
+	<Product Id="{1985D6DB-AC4E-41A2-AD05-125FE70CF409}" Name="DS Client 1.11"
+    	   Language="1033" Version="11.14.409"
            Manufacturer="Georgian Microsystems" 
            UpgradeCode="{6E1BD2B1-8686-48DC-FFF9-D9D02B01385D}"
    >
@@ -81,7 +81,8 @@
     
     <ComponentGroup Id="ProductComponents" Directory="INSTALLDIR">
 	  <ComponentGroupRef Id="AppDS19"/>
-	  <ComponentRef Id="readme" />
+   	  <ComponentGroupRef Id="AppDS20_VSRuntime" />
+	   <ComponentRef Id="readme" />
 	  <ComponentGroupRef Id="id_codexdsclient" />
 	  <ComponentGroupRef Id="BASEPROFILEGROUP" />
 	  <ComponentRef Id="cmp_baseprofile_dsprofile" />

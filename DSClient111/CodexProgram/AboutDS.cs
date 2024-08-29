@@ -1,6 +1,7 @@
 ﻿using ILG.DS.Access;
 using ILG.DS.AppStateManagement;
 using System;
+using System.Diagnostics;
 using System.Reflection;
 using System.Windows.Forms;
 
@@ -27,7 +28,13 @@ namespace ILG.DS.Dialogs
 
         private void ultraFormattedLinkLabel1_LinkClicked(object sender, Infragistics.Win.FormattedLinkLabel.LinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.codex.ge"); 
+            var processStartInfo = new ProcessStartInfo
+            {
+                FileName = "https://www.codex.ge",
+                UseShellExecute = true
+            };
+            Process.Start(processStartInfo);
+
         }
 
 

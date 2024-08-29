@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.IO;
 using ILG.DS.Controls;
 using ILG.DS.Configurations;
+using System.Diagnostics;
 
 namespace ILG.Codex.CodexR4
 {
@@ -70,7 +71,12 @@ namespace ILG.Codex.CodexR4
             try
             {
                 this.F_DS_List.DocumentListBox1.SaveToRTF(fn);
-                System.Diagnostics.Process.Start(@"file" + @":\\" + fn);
+                Process p = new Process();
+                p.StartInfo = new ProcessStartInfo(@"file" + @":\\" + fn)
+                {
+                    UseShellExecute = true
+                };
+                p.Start();
 
             }
             catch (Exception ex)

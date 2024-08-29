@@ -1,7 +1,9 @@
 ﻿using ILG.Codex.CodexR4;
 using ILG.DS.Dialogs;
 using System;
+using System.Diagnostics;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 
 
 namespace ILG.DS.Configurations.Dialogs
@@ -47,11 +49,27 @@ namespace ILG.DS.Configurations.Dialogs
 
          
                 case "FeedBack":    // ButtonTool
-                    System.Diagnostics.Process.Start("mailto:support@codexserver.com");
+                    
+                    {
+                        var processStartInfo = new ProcessStartInfo
+                        {
+                            FileName = "mailto:support@codex.ge",
+                            UseShellExecute = true
+                        };
+                        Process.Start(processStartInfo);
+                    }
                     break;
 
                 case "Web":    // ButtonTool
-                    System.Diagnostics.Process.Start("http://www.codexserver.com");
+                    
+                    {
+                        var processStartInfo = new ProcessStartInfo
+                        {
+                            FileName = "https://www.codex.ge",
+                            UseShellExecute = true
+                        };
+                        Process.Start(processStartInfo);
+                    }
                     break;
 
          

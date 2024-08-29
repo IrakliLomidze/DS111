@@ -12,6 +12,7 @@ using System.ComponentModel;
 using ILG.DS.AppStateManagement;
 using ILG.DS.Configurations;
 using ILG.Codex.CodexR4;
+using System.Diagnostics;
 
 namespace ILG.DS.Forms
 {
@@ -611,7 +612,12 @@ namespace ILG.DS.Forms
             try
             {
                 this.codexListBox1.SaveToRTF(fn);
-                System.Diagnostics.Process.Start(@"file" + @":\\" + fn);
+                Process p = new Process();
+                p.StartInfo = new ProcessStartInfo(@"file" + @":\\" + fn)
+                {
+                    UseShellExecute = true
+                };
+                p.Start();
 
             }
             catch (Exception ex)

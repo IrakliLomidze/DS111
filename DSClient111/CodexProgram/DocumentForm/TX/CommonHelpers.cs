@@ -218,8 +218,13 @@ namespace ILG.DS.Forms.DocumentForm
 					OpenFileInNewInstance(strTarget);
 				}
 				else {
-					System.Diagnostics.Process.Start(strTarget);
-				}
+                    Process p = new Process();
+                    p.StartInfo = new ProcessStartInfo(strTarget)
+                    {
+                        UseShellExecute = true
+                    };
+                    p.Start();
+                }
 			}
 			catch (Exception ex) {
 				string msg = ex.Message;

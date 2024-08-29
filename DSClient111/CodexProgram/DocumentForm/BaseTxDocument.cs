@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -184,7 +185,7 @@ namespace ILG.DS.Forms.DocumentForm
 
         private void mnuFile_Exit_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void mnuFile_Export_Click(object sender, System.EventArgs e)
@@ -1704,7 +1705,7 @@ namespace ILG.DS.Forms.DocumentForm
         }
 
 
-        
+
         // Zooming Factors
 
 
@@ -1774,7 +1775,7 @@ namespace ILG.DS.Forms.DocumentForm
             }
         }
 
-      
+
 
 
 
@@ -1982,7 +1983,7 @@ namespace ILG.DS.Forms.DocumentForm
 
         #endregion Direct Tx Opeation
 
-    
+
         private int detectzoom(int c)
         {
             // Modifed for R4
@@ -2053,14 +2054,14 @@ namespace ILG.DS.Forms.DocumentForm
                     this.textControl.Tables.Remove();
                 }
 
-                
-                    this.textControl.Clear();
+
+                this.textControl.Clear();
             }
             catch
             {
             }
 
-            
+
             //textControl.PageSize = new TXTextControl.PageSize(850, 1100);
 
             //textControl.PageMargins.Bottom = 79;
@@ -2118,7 +2119,7 @@ namespace ILG.DS.Forms.DocumentForm
 
         private void pasterAsTXFormatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-                textControl.Paste(TXTextControl.ClipboardFormat.TXTextControlFormat);
+            textControl.Paste(TXTextControl.ClipboardFormat.TXTextControlFormat);
         }
 
         private void pasteAsTxFrameToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2169,7 +2170,7 @@ namespace ILG.DS.Forms.DocumentForm
             {
                 textControl.ViewMode = TXTextControl.ViewMode.Normal;
             }
-       }
+        }
 
 
 
@@ -2244,7 +2245,7 @@ namespace ILG.DS.Forms.DocumentForm
             {
                 string str = System.IO.Path.GetExtension(fd.FileName).Trim().ToUpper();
                 TXTextControl.LoadSettings LoadSettings = new TXTextControl.LoadSettings();
-                
+
                 switch (str)
                 {
                     case ".RTF": textControl.Load(fd.FileName, TXTextControl.StreamType.RichTextFormat, LoadSettings); break;
@@ -2323,8 +2324,8 @@ namespace ILG.DS.Forms.DocumentForm
 
         public void SetFocusAndZooming()
         {
-           textControl.Focus();
-           Zooming();
+            textControl.Focus();
+            Zooming();
         }
 
 
@@ -2341,12 +2342,17 @@ namespace ILG.DS.Forms.DocumentForm
             try
             {
                 textControl.Save(fn, TXTextControl.StreamType.WordprocessingML);
-                System.Diagnostics.Process.Start(@"file" + @":\\" + fn);
+                Process p = new Process();
+                p.StartInfo = new ProcessStartInfo(@"file" + @":\\" + fn)
+                {
+                    UseShellExecute = true
+                };
+                p.Start();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("არ ხერხდება დოკუმენტის ექსპორტი MS-Word ში" + System.Environment.NewLine+
-                                ex.ToString()+
+                MessageBox.Show("არ ხერხდება დოკუმენტის ექსპორტი MS-Word ში" + System.Environment.NewLine +
+                                ex.ToString() +
                                 "ვცდით RTF ფორმატით");
                 TXTextControl.SaveSettings SaveSettings = new TXTextControl.SaveSettings();
                 SaveSettings.ImageSaveMode = TXTextControl.ImageSaveMode.SaveAsData;
@@ -2354,15 +2360,65 @@ namespace ILG.DS.Forms.DocumentForm
                 i = 1;
                 while (File.Exists(fn + "_" + i.ToString() + ".docx") == true) { i++; }
                 fn = fn + "_" + i.ToString() + ".docx";
-                System.Diagnostics.Process.Start(@"file" + @":\\" + fn);
+                Process p = new Process();
+                p.StartInfo = new ProcessStartInfo(@"file" + @":\\" + fn)
+                {
+                    UseShellExecute = true
+                };
+                p.Start();
                 return;
             }
         }
 
         public void LoadRTFFileInTxTextEditor(String FullFileName)
         {
-          textControl.Load(FullFileName, TXTextControl.StreamType.RichTextFormat);
+            textControl.Load(FullFileName, TXTextControl.StreamType.RichTextFormat);
         }
-    
+
+        private void textControl_KeyUp(object sender, KeyEventArgs e)
+        {
+            //if ((e.KeyCode == Keys.V) && (e.Control == true))
+            //{
+            //    if (textControl.CanPaste == true) textControl.Paste();
+            //    return;
+            //}
+
+            if ((e.KeyCode == Keys.C) && (e.Control == true))
+            {
+                if (textControl.CanCopy == true) textControl.Copy();
+                return;
+            }
+
+            if ((e.KeyCode == Keys.A) && (e.Control == true))
+            {
+                textControl.SelectAll();
+                return;
+            }
+
+            //if ((e.KeyCode == Keys.Z) && (e.Control == true))
+            //{
+            //    if (textControl.CanUndo == true) textControl.Undo();
+            //    return;
+            //}
+
+            if ((e.KeyCode == Keys.R) && (e.Control == true))
+            {
+                if (textControl.CanRedo == true) textControl.Redo();
+                return;
+            }
+
+            //if ((e.KeyCode == Keys.F) && (e.Control == true))
+            //{
+            //    // Changed in R4
+            //    DocumentSearchTab.Visible = true;
+            //    DocumentSearchTab.Enabled = true;
+            //    CodexInText.Focus();
+            //    return;
+            //}
+
+
+
+
+        }
     }
 }

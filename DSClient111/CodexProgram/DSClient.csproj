@@ -895,27 +895,26 @@
     <ProjectReference Include="..\DSWPFComponents\DSWPFComponents.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Infragistics.WinForms" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.AppStylistSupport" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.Dock" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.Documents.Core" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.Editors" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.Excel" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.ListView" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.Misc" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.Shared" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.StatusBar" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.TabControl" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.Toolbars" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.Tree" Version="23.2.81" />
-    <PackageReference Include="Infragistics.WinForms.WinGrid" Version="23.2.81" />
+    <PackageReference Include="Infragistics.WinForms" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.AppStylistSupport" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.Dock" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.Documents.Core" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.Editors" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.Excel" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.ListView" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.Misc" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.Shared" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.StatusBar" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.TabControl" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.Toolbars" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.Tree" Version="23.2.180" />
+    <PackageReference Include="Infragistics.WinForms.WinGrid" Version="23.2.180" />
     <PackageReference Include="Microsoft.VisualBasic" Version="10.3.0" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
-    <PackageReference Include="System.Drawing.Common" Version="8.0.2" />
-    <PackageReference Include="System.Text.Json" Version="8.0.2" />
-    <PackageReference Include="TXTextControl.TextControl.WinForms.SDK" Version="32.0.2" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.7" />
+    <PackageReference Include="TXTextControl.TextControl.WinForms.SDK" Version="32.0.3" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="SearchInText.resx" />

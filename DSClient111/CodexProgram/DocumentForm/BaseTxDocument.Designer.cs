@@ -31,8 +31,6 @@ namespace ILG.DS.Forms.DocumentForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
             components = new System.ComponentModel.Container();
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinTabControl.UltraTab ultraTab10 = new Infragistics.Win.UltraWinTabControl.UltraTab();
@@ -440,6 +438,7 @@ namespace ILG.DS.Forms.DocumentForm
             textControl.VerticalRulerBar = rulerBar2;
             textControl.Click += textControl_Click;
             textControl.KeyPress += textControl_KeyPress;
+            textControl.KeyUp += textControl_KeyUp;
             // 
             // _contextMenuApplicationFields
             // 
@@ -1592,11 +1591,10 @@ namespace ILG.DS.Forms.DocumentForm
             // 
             // toolStripOpenFile
             // 
-            toolStripOpenFile.DisplayStyle = ToolStripItemDisplayStyle.Image;
             toolStripOpenFile.Image = Codex.CodexR4.Properties.Resources.open;
             toolStripOpenFile.ImageTransparentColor = Color.Magenta;
             toolStripOpenFile.Name = "toolStripOpenFile";
-            toolStripOpenFile.Size = new Size(23, 22);
+            toolStripOpenFile.Size = new Size(114, 22);
             toolStripOpenFile.Text = "Open document";
             toolStripOpenFile.ToolTipText = "Open document";
             toolStripOpenFile.Click += toolStripButton2_Click;
