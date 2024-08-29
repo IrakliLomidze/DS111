@@ -1,4 +1,4 @@
-# DS (Document Storage) Version 1.11" 
+# DS (Document Storage) Version 1.11 
 # License
 
 **Codex Document Storage ** is free software; you can redistribute it and/or modify it under the terms of the  [**GNU Affero General Public License version 3**]([https://www.gnu.org/licenses/agpl-3.0.html]). FOR ANY PART OF THE COVERED WORK IN WHICH THE COPYRIGHT IS OWNED BY **Georgian Microsystems** and By its author **Irakli Lomidze**.
